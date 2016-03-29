@@ -16,13 +16,13 @@ e.g. `object` or `function`.
 4. `explicit coercion` ==> when it is obvious from looking at the code that a type conversion is intentionally occurring.
 `implicit coercion` ==> when the type coversion will occur as a less obvious side effect of some other intentional operation
 
-```javascript
-var a = 42;
+	```javascript
+	var a = 42;
 
-var b = a + ""; // implicit coercion
+	var b = a + ""; // implicit coercion
 
-var c = String( a );  // explicit coercion
-```
+	var c = String( a );  // explicit coercion
+	```
 
 **MY NOTE**: From [Airbnb JS suggestion](https://github.com/airbnb/javascript#type-casting--coercion). explicit coercion is a better way to do the coercion, which is `c`
 
@@ -186,6 +186,7 @@ var c = String( a );  // explicit coercion
 		clauses 11.9.3.6-7:
 
 		> If Type(x) is Boolean, return the result of the comparison ToNumber(x) == y.
+		
 		> If Type(y) is Boolean, return the result of the comparison x == ToNumber(y).
 
 		Try avoid ever using `==true` or `==false` (aka loose equality with `boolen`s) in the code.
@@ -195,6 +196,7 @@ var c = String( a );  // explicit coercion
 		clauses 11.9.3.2-3:
 
 		> If x is null and y is undefined, return true.
+
 		> If x is undefined and y is null, return true.
 
 		this means is that `null` and `undefined` can be treated as **indistinguishable** for comaprison purposes, if using `==`.
@@ -214,6 +216,7 @@ var c = String( a );  // explicit coercion
 		clauses 11.9.3.8-9:
 
 		> If Type(x) is either String or Number and Type(y) is Object, return the result of the comparison x == ToPrimitive(y).
+		
 		> If Type(x) is Object and Type(y) is either String or Number, return the result of the comparison ToPrimitive(x) == y.
 
 		There are some values where this is not the case, though, because of other overriding rules in the == algorithm. Consider:
