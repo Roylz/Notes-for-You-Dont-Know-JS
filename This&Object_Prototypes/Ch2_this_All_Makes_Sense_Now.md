@@ -1,6 +1,6 @@
 # Chapter 2: `this` All Makes Sense Now!
 
-[Chaprter One Source](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch2.md)
+[Book Source](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch2.md)
 
 #### Call-site (how the function is called)
 
